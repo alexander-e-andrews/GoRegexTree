@@ -1,4 +1,4 @@
-package stringsearchtree
+package goregextree
 
 import (
 	"github.com/dlclark/regexp2"
@@ -61,7 +61,7 @@ func (n *Node) buildAllStrings(parent string) string {
 
 //giving up on this for now, uncertenties in capture groups is reducing troup moral
 //Create a regex structure to match any of the valid strings inside the tree
-func (n *Node) StartBuildRegex(ignoreCase bool, starters []rune, endingers []rune, matchStartAndEndLine bool) *regexp2.Regexp {
+func (n *Node) BuildRegex(ignoreCase bool, starters []rune, endingers []rune, matchStartAndEndLine bool) *regexp2.Regexp {
 
 	gex := ""
 
@@ -117,7 +117,7 @@ func (n *Node) StartBuildRegex(ignoreCase bool, starters []rune, endingers []run
 
 		gex += tempGex
 	}
-	fmt.Println(gex)
+	//fmt.Println(gex)
 	return regexp2.MustCompile(gex, regexp2.None)
 }
 
