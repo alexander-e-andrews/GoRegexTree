@@ -2,7 +2,6 @@ package goregextree
 
 import (
 	"github.com/dlclark/regexp2"
-	"golang.org/x/exp/errors/fmt"
 )
 
 //Using a rune implementation, idk if its the right way to go though
